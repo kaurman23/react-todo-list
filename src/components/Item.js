@@ -1,10 +1,10 @@
 import React from 'react'
 
-export const Item = () => {
+export const Item = ({job}) => {
     return (
         <div className="item-list ">
             <div className="alert alert-secondary">
-                This is a To Do Item
+                {job}
                 <button type="button" className="close" data-dismiss="alert">
                     &times;
                 </button>

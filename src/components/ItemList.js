@@ -1,10 +1,15 @@
-import React from 'react'
-import {Item} from './Item'
+import React, {useContext} from 'react'
+import {Item} from './Item';
+import { GlobalContext} from "../contexts/GlobalState"
+
 export const ItemList = () => {
+    const {items} = useContext(GlobalContext);
+    
     return (
         <>
-            <Item />
-            <Item />
+            {items.map(item => 
+                <Item key={item.id} job={item.todo} />
+            )}
         </>
         
         

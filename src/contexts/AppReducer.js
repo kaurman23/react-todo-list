@@ -6,13 +6,18 @@ export default (state, action) => {
                 items: state.items.filter((item => item.id!==action.payload))
             })
         case 'ADD_JOB':
-            console.log("okay")
             return({
                 ...state,
                 items: [action.payload, ...state.items]
-            }
+            })
+        
+        case 'MAKE_DONE':
+            return({
+                ...state,
+                items: state.items.map((item => item.id===action.payload? {...item, done:!item.done}:item))
+            })
 
-            )
+            
         default:
             return state
     }

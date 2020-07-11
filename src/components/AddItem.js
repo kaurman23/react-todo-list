@@ -1,4 +1,4 @@
-import React, {useState, useContext, useEffect} from 'react';
+import React, {useState, useContext} from 'react';
 import {GlobalContext} from "../contexts/GlobalState";
 import shortid from  'shortid';
 
@@ -16,7 +16,8 @@ export const AddItem = () => {
 
         const newItem = {
             id: shortid.generate(),
-            todo
+            todo,
+            done: false
         }
         addItem(newItem);
     }

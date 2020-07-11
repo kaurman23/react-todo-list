@@ -35,12 +35,20 @@ export const GlobalProvider = ({children}) => {
         })
     }
 
+    function makeDone(id){
+        dispatch({
+            type: 'MAKE_DONE',
+            payload: id
+        })
+    }
+
     return(
         <GlobalContext.Provider value={
             {
                 items: state.items, 
                 deleteItem,
-                addItem
+                addItem,
+                makeDone
             }
         }>
         {children}

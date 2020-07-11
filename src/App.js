@@ -3,7 +3,8 @@ import './App.css';
 import {Header} from "./components/Header";
 import {AddItem} from "./components/AddItem";
 import {ItemList} from "./components/ItemList";
-import {GlobalProvider} from "./contexts/GlobalState"
+import {GlobalProvider} from "./contexts/GlobalState";
+import {Summary} from './components/Summary';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <div className="container">
         <Header />
         <AddItem />
+        <Summary />
         <ItemList />
       </div>
     </GlobalProvider>

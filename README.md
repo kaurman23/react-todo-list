@@ -19,12 +19,11 @@
 
 
 ## :hatching_chick: Prerequisites
-* [node](https://nodejs.org/en/) >= 12.18.0
 * npm >= 6.14.4
 
 ## :zap: Installation
 
-1. Clone / Download [this](https://github.com/khusharth/doyouknow) repo.
+1. Clone / Download [this](https://github.com/kaurman23/react-todo-list) repo.
 2. Inside the project open a terminal and run:
     ```
     npm install

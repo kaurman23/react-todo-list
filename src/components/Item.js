@@ -8,17 +8,15 @@ export const Item = ({job}) => {
     const jobId = job.id;
 
     const doneJob = () => {
-        itemRef.current.classList.remove('alert-secondary');
-        itemRef.current.classList.add('alert-success');
-        itemRef.current.classList.add('strike')
+        
         makeDone(jobId)
     }
 
-    
+    const check = ((job.done)? "alert-warning strike": "alert-primary");
 
     return (
         <div className="item-list ">
-            <div className="alert alert-secondary" onClick={ (jobId) => doneJob(jobId)} ref={itemRef}>
+            <div className={`alert ${check} `} onClick={ (jobId) => doneJob(jobId)} ref={itemRef}>
                 {job.todo}
                 <button type="button" className="close" data-dismiss="alert" onClick={()=> deleteItem(job.id)}>
                     &times;

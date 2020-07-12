@@ -12,14 +12,22 @@ export const AddItem = () => {
 
     const onSubmit = (e) => {
         e.preventDefault();
-        
-
-        const newItem = {
-            id: shortid.generate(),
-            todo,
-            done: false
+        if(todo==='')
+        {
+            alert("You cannot leave an empty field");
         }
-        addItem(newItem);
+        else
+        {
+            const newItem = {
+                id: shortid.generate(),
+                todo,
+                done: false
+            }
+            addItem(newItem);
+            setTodo('')
+        }
+       
+
     }
 
     return (
